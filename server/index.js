@@ -6,10 +6,14 @@ const { PORT } = require('./config')
 const app = express()
 
 // Apply static middleware
-app.use('/', express.static('/public'))
+app.use('/static', express.static(__dirname + '/public'))
 
-// Apply router middlewares
-app.use('/', require('./routers/root'))
+// Apply routes
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/public/index.html')
+})
+
+// Apply router middleware
 app.use('/api', require('./routers/api'))
 
 // Start the app

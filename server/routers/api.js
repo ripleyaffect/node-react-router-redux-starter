@@ -6,4 +6,5 @@ router.get('/', (req, res) => {
   res.json({ hello: 'friend' })
 })
 
+
 module.exports = router
