@@ -11,7 +11,6 @@ module.exports = (config) => ({
         loader: 'babel',
         include: [
           __dirname + '/client',
-          __dirname + '/shared'
         ],
         exclude: [/node_modules/],
         query: {
