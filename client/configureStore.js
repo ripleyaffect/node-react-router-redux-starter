@@ -11,8 +11,6 @@ const composeEnhancers = addDevTools ?
   window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
 : compose;
 
-console.log(composeEnhancers);
-
 export default () => {
   return createStore(
     app,

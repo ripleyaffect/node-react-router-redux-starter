@@ -9,7 +9,7 @@ const app = express()
 app.use('/static', express.static(__dirname + '/public'))
 
 // Apply routes
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
   res.sendFile(__dirname + '/public/index.html')
 })
 
